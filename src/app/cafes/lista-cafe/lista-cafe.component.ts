@@ -19,7 +19,8 @@ export class ListaCafeComponent implements OnInit {
   }
 
   public getTitulosTabla(): string[]{
-    return Object.keys(this.cafes[0]);
+    const primeraFila = this.cafes.length ? this.cafes[0] : []
+    return Object.keys(primeraFila);
   }
 
   public cantidadElementos(cafeBuscar: string): number {
